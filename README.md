@@ -39,6 +39,4 @@ protected override IEnumerable<IBarManagerControllerAction> CreateContextMenu() 
 
 ## Files to Review
 
-- link.cs (VB: link.vb)
-- link.js
-- ...
+- [MainWindow.xaml.cs](./CS/WpfApp7/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfApp7/MainWindow.xaml.vb))
