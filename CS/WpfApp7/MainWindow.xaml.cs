@@ -17,7 +17,7 @@ namespace WpfApp7 {
                 var item = new BarButtonItem() {
                     Glyph = DXImageHelper.GetImageSource("Images/Arrows/Stop_16x16.png"),
                 };
-                item.ItemClick += SecondItem_ItemClick;
+                item.ItemClick += OnContextToolBarItemClick;
                 yield return item;
             }
             foreach (IBarManagerControllerAction action in base.CreateContextMenu())
@@ -30,19 +30,19 @@ namespace WpfApp7 {
                     Glyph = DXImageHelper.GetImageSource("Images/Arrows/Record_16x16.png"),
                     Content = "Custom Item"
                 };
-                item.ItemClick += Item_ItemClick;
+                item.ItemClick += OnContextMenuItemClick;
                 yield return item;
             }
             foreach (IBarManagerControllerAction action in base.CreateContextMenu())
                 yield return action;
         }
 
-        private void Item_ItemClick(object sender, ItemClickEventArgs e) {
-            MessageBox.Show("Custom item clicked!");
+        private void OnContextMenuItemClick(object sender, ItemClickEventArgs e) {
+            MessageBox.Show("Custom context menu item is clicked!");
         }
 
-        private void SecondItem_ItemClick(object sender, ItemClickEventArgs e) {
-            MessageBox.Show("Custom toolbar item clicked...");
+        private void OnContextToolBarItemClick(object sender, ItemClickEventArgs e) {
+            MessageBox.Show("Custom context toolbar item is clicked...");
         }
     }
 }

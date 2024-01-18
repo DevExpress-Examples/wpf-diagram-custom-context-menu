@@ -40,6 +40,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Mvvm.v17.1" />
+    <Reference Include="DevExpress.Xpf.CodeView.v17.1" />
+    <Reference Include="DevExpress.Data.Desktop.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
     <Reference Include="DevExpress.Xpf.Core.v17.1" />
     <Reference Include="DevExpress.Xpf.Diagram.v17.1" />
     <Reference Include="System" />
