@@ -4,10 +4,8 @@ using DevExpress.Xpf.Diagram;
 using System.Collections.Generic;
 using System.Windows;
 
-namespace WpfApp7
-{
+namespace WpfApp7 {
     public partial class MainWindow {
-
         public MainWindow() {
             InitializeComponent();
         }

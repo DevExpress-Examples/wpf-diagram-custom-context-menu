@@ -10,7 +10,6 @@
     Title="MainWindow"
     Width="900"
     Height="450"
-    WindowKind="Normal"
     mc:Ignorable="d">
 
     <Grid>
