@@ -19,7 +19,7 @@ Namespace WpfApp7
         Protected Overrides Iterator Function CreateContextToolBar() As IEnumerable(Of IBarManagerControllerAction)
             If SelectedItems IsNot Nothing AndAlso SelectedItems.Count > 0 Then
                 Dim item = New BarButtonItem() With {.Glyph = DXImageHelper.GetImageSource("Images/Arrows/Stop_16x16.png")}
-                AddHandler item.ItemClick, AddressOf SecondItem_ItemClick
+                AddHandler item.ItemClick, AddressOf OnContextToolBarItemClick
                 Yield item
             End If
 
@@ -31,7 +31,7 @@ Namespace WpfApp7
         Protected Overrides Iterator Function CreateContextMenu() As IEnumerable(Of IBarManagerControllerAction)
             If SelectedItems IsNot Nothing AndAlso SelectedItems.Count > 0 Then
                 Dim item = New BarButtonItem() With {.Glyph = DXImageHelper.GetImageSource("Images/Arrows/Record_16x16.png"), .Content = "Custom Item"}
-                AddHandler item.ItemClick, AddressOf Item_ItemClick
+                AddHandler item.ItemClick, AddressOf OnContextMenuItemClick
                 Yield item
             End If
 
@@ -40,12 +40,12 @@ Namespace WpfApp7
             Next
         End Function
 
-        Private Sub Item_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs)
-            MessageBox.Show("Custom item clicked!")
+        Private Sub OnContextMenuItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs)
+            MessageBox.Show("Custom context menu item is clicked!")
         End Sub
 
-        Private Sub SecondItem_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs)
-            MessageBox.Show("Custom toolbar item clicked...")
+        Private Sub OnContextToolBarItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs)
+            MessageBox.Show("Custom context toolbar item is clicked...")
         End Sub
     End Class
 End Namespace
