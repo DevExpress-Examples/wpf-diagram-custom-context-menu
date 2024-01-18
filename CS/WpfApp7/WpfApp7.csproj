@@ -46,6 +46,7 @@
     <Reference Include="DevExpress.Data.v17.1" />
     <Reference Include="DevExpress.Xpf.Core.v17.1" />
     <Reference Include="DevExpress.Xpf.Diagram.v17.1" />
+    <Reference Include="DevExpress.Diagram.v17.1.Core" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
