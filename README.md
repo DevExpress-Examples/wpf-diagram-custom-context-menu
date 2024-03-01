@@ -6,11 +6,11 @@
 
 # WPF DiagramControl - Create Custom Context Menus
 
-This example demonstrates how to customize shape context menus in the [Diagram Control](https://docs.devexpress.com/WPF/116103/controls-and-libraries/diagram-control/diagram-control).
+This example customizes shape context menus within the DevExpress [WPF Diagram Control](https://docs.devexpress.com/WPF/116103/controls-and-libraries/diagram-control/diagram-control).
 
 ![image](https://github.com/DevExpress-Examples/wpf-diagram-custom-context-menu/assets/65009440/869658cc-f78d-41d0-bca1-89dac35a5158)
 
-The Diagram Control does not include built-in APIs to customize shape context menus. You can create a `DiagramControl` or `DiagramDesignerControl` class descendant and override the **CreateContextMenu** or **CreateContextToolBar** method to add custom menu items:
+The Diagram Control does not include built-in APIs to customize shape-related context menus. You can create a `DiagramControl` or `DiagramDesignerControl` class descendant and override the **CreateContextMenu** or **CreateContextToolBar** method to add custom menu items as needs dictate:
 
 ```cs
 public class DiagramDesignerControlEx : DiagramDesignerControl {
